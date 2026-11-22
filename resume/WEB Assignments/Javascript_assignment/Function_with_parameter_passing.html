@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parameter Passing</title>
+</head>
+<body>
+    <h2>JavaScript Function with Parameters</h2>
+
+    <button onclick="displaySum(10, 20)">Call Function</button>
+    <p id="result"></p>
+
+    <script>
+        function displaySum(a, b) {
+            let sum = a + b;
+
+            document.getElementById("result").textContent =
+                "Sum = " + sum;
+        }
+    </script>
+</body>
+</html>

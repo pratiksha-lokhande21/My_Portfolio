@@ -1,0 +1,829 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Assignment 3 - All 50 Forms</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6fb;
+        margin: 0;
+        padding: 20px;
+        color: #222;
+    }
+    h1, .subtitle {
+        text-align: center;
+    }
+    h1 { color: #203a70; }
+    h2 {
+        background: #203a70;
+        color: white;
+        padding: 14px;
+        border-radius: 8px;
+    }
+    .question {
+        background: white;
+        padding: 18px;
+        margin: 16px 0;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+    h3 { color: #203a70; }
+    input, select, textarea, button {
+        margin: 6px 4px 8px 0;
+        padding: 7px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    input[type="radio"],
+    input[type="checkbox"],
+    input[type="range"],
+    input[type="color"] {
+        vertical-align: middle;
+    }
+    button, input[type="submit"], input[type="reset"] {
+        background: #2058aa;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 9px 14px;
+    }
+    button:disabled {
+        background: #aaa;
+        cursor: not-allowed;
+    }
+    fieldset { margin: 10px 0; }
+    .step[hidden] { display: none; }
+    .stars label { cursor: pointer; }
+    .note { color: #555; font-size: 13px; }
+</style>
+</head>
+
+<body>
+
+<h1>HTML Assignment - 3</h1>
+<p class="subtitle">Topic: Forms | All 50 Questions</p>
+
+<h2>PART A - BASIC QUESTIONS (1-20)</h2>
+
+<!-- BASIC 1 -->
+<div class="question">
+<h3>1. Username Input</h3>
+<form>
+    <label for="b1">Username:</label>
+    <input type="text" id="b1" name="username">
+</form>
+</div>
+
+<!-- BASIC 2 -->
+<div class="question">
+<h3>2. Password Input</h3>
+<form>
+    <label for="b2">Password:</label>
+    <input type="password" id="b2" name="password">
+</form>
+</div>
+
+<!-- BASIC 3 -->
+<div class="question">
+<h3>3. First Name and Last Name</h3>
+<form>
+    <label>First Name:
+        <input type="text" name="first">
+    </label><br>
+    <label>Last Name:
+        <input type="text" name="last">
+    </label>
+</form>
+</div>
+
+<!-- BASIC 4 -->
+<div class="question">
+<h3>4. Submit Button</h3>
+<form>
+    <input type="text" name="name" placeholder="Enter Name">
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+<!-- BASIC 5 -->
+<div class="question">
+<h3>5. Reset Button</h3>
+<form>
+    <input type="text" name="name" placeholder="Enter Name">
+    <input type="reset" value="Reset">
+</form>
+</div>
+
+<!-- BASIC 6 -->
+<div class="question">
+<h3>6. Gender Radio Buttons</h3>
+<form>
+    <label><input type="radio" name="gender" value="Male"> Male</label>
+    <label><input type="radio" name="gender" value="Female"> Female</label>
+</form>
+</div>
+
+<!-- BASIC 7 -->
+<div class="question">
+<h3>7. Hobbies Checkboxes</h3>
+<form>
+    <label><input type="checkbox" name="hobby" value="Reading"> Reading</label>
+    <label><input type="checkbox" name="hobby" value="Sports"> Sports</label>
+    <label><input type="checkbox" name="hobby" value="Coding"> Coding</label>
+</form>
+</div>
+
+<!-- BASIC 8 -->
+<div class="question">
+<h3>8. Profile Picture Upload</h3>
+<form enctype="multipart/form-data">
+    <label>Upload Picture:
+        <input type="file" name="photo" accept="image/*">
+    </label>
+</form>
+</div>
+
+<!-- BASIC 9 -->
+<div class="question">
+<h3>9. Label Tag</h3>
+<form>
+    <label for="b9">Enter Name:</label>
+    <input type="text" id="b9" name="name">
+</form>
+</div>
+
+<!-- BASIC 10 -->
+<div class="question">
+<h3>10. Country Dropdown</h3>
+<form>
+    <label for="b10">Select Country:</label>
+    <select id="b10" name="country">
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Canada</option>
+    </select>
+</form>
+</div>
+
+<!-- BASIC 11 -->
+<div class="question">
+<h3>11. Comments Textarea</h3>
+<form>
+    <label for="b11">Comments:</label><br>
+    <textarea id="b11" name="comments" rows="4" cols="35"></textarea>
+</form>
+</div>
+
+<!-- BASIC 12 -->
+<div class="question">
+<h3>12. Click Me Button</h3>
+<form>
+    <button type="button" onclick="alert('Button Clicked!')">
+        Click Me
+    </button>
+</form>
+</div>
+
+<!-- BASIC 13 -->
+<div class="question">
+<h3>13. Required Name Field</h3>
+<form>
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- BASIC 14 -->
+<div class="question">
+<h3>14. Email Validation</h3>
+<form>
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- BASIC 15 -->
+<div class="question">
+<h3>15. Age Number Input</h3>
+<form>
+    <label>Age:
+        <input type="number" name="age">
+    </label>
+</form>
+</div>
+
+<!-- BASIC 16 -->
+<div class="question">
+<h3>16. Birthdate Picker</h3>
+<form>
+    <label>Date of Birth:
+        <input type="date" name="dob">
+    </label>
+</form>
+</div>
+
+<!-- BASIC 17 -->
+<div class="question">
+<h3>17. Appointment Time</h3>
+<form>
+    <label>Appointment Time:
+        <input type="time" name="time">
+    </label>
+</form>
+</div>
+
+<!-- BASIC 18 -->
+<div class="question">
+<h3>18. Favourite Colour</h3>
+<form>
+    <label>Choose Colour:
+        <input type="color" name="colour">
+    </label>
+</form>
+</div>
+
+<!-- BASIC 19 -->
+<div class="question">
+<h3>19. Volume Slider (1-100)</h3>
+<form>
+    <label>Volume:
+        <input type="range" name="volume" min="1" max="100" value="50">
+    </label>
+</form>
+</div>
+
+<!-- BASIC 20 -->
+<div class="question">
+<h3>20. Fieldset and Legend</h3>
+<form>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label>Name:
+            <input type="text" name="name">
+        </label><br>
+        <label>Email:
+            <input type="email" name="email">
+        </label>
+    </fieldset>
+</form>
+</div>
+
+
+<h2>PART B - INTERMEDIATE QUESTIONS (1-20)</h2>
+
+<!-- INTERMEDIATE 1 -->
+<div class="question">
+<h3>1. Login Form</h3>
+<form>
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 2 -->
+<div class="question">
+<h3>2. Contact Form</h3>
+<form>
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="tel" name="phone" placeholder="Phone"><br>
+    <textarea name="message" placeholder="Message" rows="4"></textarea><br>
+    <button type="submit">Send</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 3 -->
+<div class="question">
+<h3>3. Payment Method</h3>
+<form>
+    <label><input type="radio" name="payment" value="Credit Card"> Credit Card</label><br>
+    <label><input type="radio" name="payment" value="UPI"> UPI</label><br>
+    <label><input type="radio" name="payment" value="COD"> Cash on Delivery</label>
+</form>
+</div>
+
+<!-- INTERMEDIATE 4 -->
+<div class="question">
+<h3>4. Select Languages</h3>
+<form>
+    <label><input type="checkbox" name="language" value="English"> English</label>
+    <label><input type="checkbox" name="language" value="Hindi"> Hindi</label>
+    <label><input type="checkbox" name="language" value="French"> French</label>
+    <label><input type="checkbox" name="language" value="Spanish"> Spanish</label>
+</form>
+</div>
+
+<!-- INTERMEDIATE 5 -->
+<div class="question">
+<h3>5. Age Between 18 and 60</h3>
+<form>
+    <input type="number" name="age" min="18" max="60" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 6 -->
+<div class="question">
+<h3>6. Ten-Digit Phone Validation</h3>
+<form>
+    <input type="tel" name="phone"
+           pattern="[0-9]{10}"
+           title="Enter exactly 10 digits"
+           placeholder="10-digit phone" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 7 -->
+<div class="question">
+<h3>7. PDF File Upload</h3>
+<form enctype="multipart/form-data">
+    <input type="file" name="pdf" accept=".pdf,application/pdf" required>
+    <button type="submit">Upload</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 8 -->
+<div class="question">
+<h3>8. Profession Dropdown</h3>
+<form>
+    <select name="profession">
+        <option>Student</option>
+        <option>Teacher</option>
+        <option>Developer</option>
+        <option>Designer</option>
+    </select>
+</form>
+</div>
+
+<!-- INTERMEDIATE 9 -->
+<div class="question">
+<h3>9. Terms and Conditions</h3>
+<form>
+    <label>
+        <input type="checkbox" id="terms"
+               onchange="document.getElementById('termsBtn').disabled = !this.checked">
+        I agree to Terms and Conditions
+    </label><br>
+    <button id="termsBtn" type="submit" disabled>Submit</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 10 -->
+<div class="question">
+<h3>10. Address Fieldset</h3>
+<form>
+    <fieldset>
+        <legend>Address Details</legend>
+        <input type="text" name="street" placeholder="Street"><br>
+        <input type="text" name="city" placeholder="City"><br>
+        <input type="text" name="state" placeholder="State"><br>
+        <input type="text" name="pin" placeholder="PIN Code">
+    </fieldset>
+</form>
+</div>
+
+<!-- INTERMEDIATE 11 -->
+<div class="question">
+<h3>11. Correct Email Format</h3>
+<form>
+    <input type="email" name="email" placeholder="abc@mail.com" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 12 -->
+<div class="question">
+<h3>12. Placeholder Attributes</h3>
+<form>
+    <input type="text" name="name" placeholder="Enter Name"><br>
+    <input type="email" name="email" placeholder="Enter Email"><br>
+    <input type="password" name="password" placeholder="Enter Password">
+</form>
+</div>
+
+<!-- INTERMEDIATE 13 -->
+<div class="question">
+<h3>13. Confirm Password</h3>
+<form id="confirmForm">
+    <input type="password" id="pass1" placeholder="Password" required><br>
+    <input type="password" id="pass2" placeholder="Confirm Password" required><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 14 -->
+<div class="question">
+<h3>14. Reset Form</h3>
+<form>
+    <input type="text" name="name" placeholder="Name"><br>
+    <input type="email" name="email" placeholder="Email"><br>
+    <button type="reset">Reset</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 15 -->
+<div class="question">
+<h3>15. Newsletter Signup</h3>
+<form>
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <button type="submit">Subscribe</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 16 -->
+<div class="question">
+<h3>16. Disabled Input</h3>
+<form>
+    <label>Student ID:
+        <input type="text" value="MCA101" disabled>
+    </label>
+</form>
+</div>
+
+<!-- INTERMEDIATE 17 -->
+<div class="question">
+<h3>17. Hidden Input</h3>
+<form>
+    <input type="hidden" name="userID" value="101">
+    <input type="text" name="name" placeholder="Name">
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- INTERMEDIATE 18 -->
+<div class="question">
+<h3>18. Experience Rating (1-10)</h3>
+<form>
+    <input type="range" min="1" max="10" value="5"
+           oninput="document.getElementById('ratingValue').textContent=this.value">
+    <span id="ratingValue">5</span>
+</form>
+</div>
+
+<!-- INTERMEDIATE 19 -->
+<div class="question">
+<h3>19. Background Colour Picker</h3>
+<form>
+    <label>Choose Background:
+        <input type="color" value="#f4f6fb"
+               oninput="document.body.style.backgroundColor=this.value">
+    </label>
+</form>
+</div>
+
+<!-- INTERMEDIATE 20 -->
+<div class="question">
+<h3>20. Telephone Input</h3>
+<form>
+    <input type="tel" name="phone"
+           placeholder="Enter Phone Number"
+           pattern="[0-9]{10}" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+
+<h2>PART C - ADVANCED QUESTIONS (1-10)</h2>
+
+<!-- ADVANCED 1 -->
+<div class="question">
+<h3>1. Registration Form with Validation</h3>
+<form id="registrationForm">
+    <input type="text" name="name" placeholder="Full Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+
+    <input type="password" id="regPass"
+           placeholder="Password" minlength="8" required><br>
+
+    <input type="password" id="regConfirm"
+           placeholder="Confirm Password" required><br>
+
+    <label>Gender:</label>
+    <label><input type="radio" name="regGender" value="Male" required> Male</label>
+    <label><input type="radio" name="regGender" value="Female"> Female</label>
+    <br>
+
+    <select name="country" required>
+        <option value="">Select Country</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+    </select><br>
+
+    <button type="submit">Register</button>
+</form>
+</div>
+
+<!-- ADVANCED 2 -->
+<div class="question">
+<h3>2. Strong Password Pattern</h3>
+<form>
+    <input type="password" name="password"
+           pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+           title="At least 8 characters, one uppercase letter and one number"
+           placeholder="Strong Password" required>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- ADVANCED 3 -->
+<div class="question">
+<h3>3. Multi-Step Form</h3>
+
+<form id="multiForm">
+
+    <div id="step1" class="step">
+        <h4>Step 1: Personal Information</h4>
+        <input type="text" id="multiName"
+               placeholder="Name" required><br>
+        <input type="number" id="multiAge"
+               placeholder="Age" min="1" required><br>
+        <button type="button" onclick="nextStep(1)">Next</button>
+    </div>
+
+    <div id="step2" class="step" hidden>
+        <h4>Step 2: Contact Information</h4>
+        <input type="email" id="multiEmail"
+               placeholder="Email" required><br>
+        <input type="tel" id="multiPhone"
+               placeholder="Phone" pattern="[0-9]{10}" required><br>
+        <button type="button" onclick="showStep(1)">Previous</button>
+        <button type="button" onclick="nextStep(2)">Next</button>
+    </div>
+
+    <div id="step3" class="step" hidden>
+        <h4>Step 3: Submit</h4>
+        <p>Review your information and submit.</p>
+        <button type="button" onclick="showStep(2)">Previous</button>
+        <button type="submit">Submit</button>
+    </div>
+
+</form>
+</div>
+
+<!-- ADVANCED 4 -->
+<div class="question">
+<h3>4. Student Survey Form</h3>
+<form>
+    <input type="text" name="name" placeholder="Name" required><br>
+
+    <label>Gender:</label>
+    <label><input type="radio" name="surveyGender" value="Male"> Male</label>
+    <label><input type="radio" name="surveyGender" value="Female"> Female</label>
+    <br><br>
+
+    <label>Interested Subjects:</label><br>
+    <label><input type="checkbox" name="subject" value="Java"> Java</label>
+    <label><input type="checkbox" name="subject" value="Python"> Python</label>
+    <label><input type="checkbox" name="subject" value="HTML"> HTML</label>
+    <br><br>
+
+    <select name="course">
+        <option>MCA</option>
+        <option>MBA</option>
+        <option>BCA</option>
+    </select><br>
+
+    <textarea name="feedback" placeholder="Feedback" rows="4"></textarea><br>
+    <button type="submit">Submit Survey</button>
+</form>
+</div>
+
+<!-- ADVANCED 5 -->
+<div class="question">
+<h3>5. Job Application Form</h3>
+<form enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Full Name" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="tel" name="phone" placeholder="Phone Number" required><br>
+
+    <select name="position">
+        <option>Software Developer</option>
+        <option>Web Developer</option>
+        <option>Java Developer</option>
+        <option>Python Developer</option>
+    </select><br>
+
+    <label>Upload Resume (PDF or DOC):</label><br>
+    <input type="file" name="resume"
+           accept=".pdf,.doc,application/pdf,application/msword"
+           required><br>
+
+    <button type="submit">Apply Now</button>
+</form>
+</div>
+
+<!-- ADVANCED 6 -->
+<div class="question">
+<h3>6. Disable Submit Until Fields Are Valid</h3>
+<form id="requiredForm">
+    <input type="text" id="requiredName"
+           placeholder="Name" required><br>
+    <input type="email" id="requiredEmail"
+           placeholder="Email" required><br>
+    <button type="submit" id="requiredBtn" disabled>Submit</button>
+</form>
+</div>
+
+<!-- ADVANCED 7 -->
+<div class="question">
+<h3>7. Accessible Form with ARIA</h3>
+<form aria-label="Accessible Registration Form">
+
+    <label for="ariaName">Name:</label>
+    <input type="text" id="ariaName" name="name"
+           aria-required="true" required><br>
+
+    <label for="ariaEmail">Email:</label>
+    <input type="email" id="ariaEmail" name="email"
+           aria-label="Enter your email address"
+           required><br>
+
+    <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="ariaGender" value="Male"> Male</label>
+        <label><input type="radio" name="ariaGender" value="Female"> Female</label>
+    </fieldset>
+
+    <label for="ariaMessage">Message:</label><br>
+    <textarea id="ariaMessage" name="message"
+              aria-label="Enter your message"></textarea><br>
+
+    <button type="submit" aria-label="Submit registration">
+        Submit
+    </button>
+</form>
+</div>
+
+<!-- ADVANCED 8 -->
+<div class="question">
+<h3>8. Booking Date Today or Later</h3>
+<form>
+    <label>Select Booking Date:
+        <input type="date" id="bookingDate"
+               name="bookingDate" required>
+    </label>
+    <button type="submit">Book Now</button>
+</form>
+</div>
+
+<!-- ADVANCED 9 -->
+<div class="question">
+<h3>9. Profile Settings</h3>
+<form id="profileForm">
+    <input type="text" name="name"
+           placeholder="Profile Name" required><br>
+
+    <label>Profile Picture:</label>
+    <input type="file" name="photo" accept="image/*"><br>
+
+    <label>Colour Theme:</label>
+    <input type="color" id="profileColour" value="#ffffff"><br>
+
+    <button type="submit">Save Settings</button>
+</form>
+</div>
+
+<!-- ADVANCED 10 -->
+<div class="question">
+<h3>10. Feedback Form with Star Rating</h3>
+<form id="feedbackForm">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+
+    <p>Rate Your Experience:</p>
+    <div class="stars">
+        <label><input type="radio" name="stars" value="1" required> &#9733;</label><br>
+        <label><input type="radio" name="stars" value="2"> &#9733;&#9733;</label><br>
+        <label><input type="radio" name="stars" value="3"> &#9733;&#9733;&#9733;</label><br>
+        <label><input type="radio" name="stars" value="4"> &#9733;&#9733;&#9733;&#9733;</label><br>
+        <label><input type="radio" name="stars" value="5"> &#9733;&#9733;&#9733;&#9733;&#9733;</label>
+    </div>
+
+    <textarea name="comments" rows="4"
+              placeholder="Enter your feedback"></textarea><br>
+    <button type="submit">Submit Feedback</button>
+</form>
+</div>
+
+
+<script>
+
+// Demonstration: prevent ordinary forms from navigating away.
+// Actual data storage requires a backend.
+document.querySelectorAll("form").forEach(function(form) {
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+    });
+});
+
+// Intermediate 13: Password confirmation
+document.getElementById("confirmForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let p1 = document.getElementById("pass1").value;
+    let p2 = document.getElementById("pass2").value;
+
+    if (p1 !== p2) {
+        alert("Passwords do not match!");
+    } else {
+        alert("Passwords match!");
+    }
+});
+
+// Advanced 1: Registration validation
+document.getElementById("registrationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let p1 = document.getElementById("regPass").value;
+    let p2 = document.getElementById("regConfirm").value;
+
+    if (p1 !== p2) {
+        alert("Passwords do not match!");
+    } else {
+        alert("Registration form validated successfully!");
+    }
+});
+
+// Advanced 3: Multi-step form
+function showStep(step) {
+    for (let i = 1; i <= 3; i++) {
+        document.getElementById("step" + i).hidden = (i !== step);
+    }
+}
+
+function nextStep(step) {
+    let ids = step === 1
+        ? ["multiName", "multiAge"]
+        : ["multiEmail", "multiPhone"];
+
+    for (let id of ids) {
+        let input = document.getElementById(id);
+        if (!input.reportValidity()) return;
+    }
+
+    showStep(step + 1);
+}
+
+document.getElementById("multiForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Multi-step form completed successfully!");
+});
+
+// Advanced 6: Enable submit after validation
+let requiredName = document.getElementById("requiredName");
+let requiredEmail = document.getElementById("requiredEmail");
+let requiredBtn = document.getElementById("requiredBtn");
+
+function checkRequiredFields() {
+    requiredBtn.disabled = !(
+        requiredName.value.trim() !== "" &&
+        requiredEmail.value.trim() !== "" &&
+        requiredEmail.validity.valid
+    );
+}
+
+requiredName.addEventListener("input", checkRequiredFields);
+requiredEmail.addEventListener("input", checkRequiredFields);
+
+// Advanced 8: Today's local date as minimum
+let today = new Date();
+let yyyy = today.getFullYear();
+let mm = String(today.getMonth() + 1).padStart(2, "0");
+let dd = String(today.getDate()).padStart(2, "0");
+
+document.getElementById("bookingDate").min =
+    yyyy + "-" + mm + "-" + dd;
+
+// Advanced 9: Apply profile colour
+document.getElementById("profileForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    document.body.style.backgroundColor =
+        document.getElementById("profileColour").value;
+
+    alert("Profile settings applied!");
+});
+
+// Advanced 10: Feedback confirmation
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let rating = document.querySelector(
+        '#feedbackForm input[name="stars"]:checked'
+    ).value;
+
+    alert("Thank you for your " + rating + "-star feedback!");
+});
+
+</script>
+
+</body>
+</html>

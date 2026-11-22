@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+</head>
+<body>
+    <h2>JavaScript Mouse Events</h2>
+
+    <button onmouseup="showEvent('Mouse Up')">
+        Mouse Up
+    </button>
+
+    <button onclick="showEvent('Single Click')">
+        Single Click
+    </button>
+
+    <button ondblclick="showEvent('Double Click')">
+        Double Click
+    </button>
+
+    <button onmouseover="showEvent('Mouse Over')">
+        Mouse Over
+    </button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function showEvent(message) {
+            document.getElementById("result").textContent =
+                message + " Event Triggered!";
+        }
+    </script>
+</body>
+</html>

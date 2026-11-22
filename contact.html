@@ -1,0 +1,97 @@
+
+<?php
+$name = $email = $subject = $message = "";
+$success = "";
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = trim($_POST["name"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $subject = trim($_POST["subject"] ?? "");
+    $message = trim($_POST["message"] ?? "");
+
+    if ($name == "" || $email == "" || $subject == "" || $message == "") {
+        $error = "Please fill in all fields.";
+    }
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Please enter a valid email address.";
+    }
+    else {
+        $success = "Thank you! Your message has been submitted.";
+        $name = $email = $subject = $message = "";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Pratiksha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="section contact-section">
+
+        <h2>Contact Me</h2>
+
+        <p>Have a project or opportunity? Let's connect!</p>
+
+        <?php if ($success != ""): ?>
+            <p class="success"><?php echo $success; ?></p>
+        <?php endif; ?>
+
+        <?php if ($error != ""): ?>
+            <p class="error"><?php echo $error; ?></p>
+        <?php endif; ?>
+
+        <form method="POST" action="contact.php" class="contact-form">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value="<?php echo htmlspecialchars($name); ?>"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value="<?php echo htmlspecialchars($email); ?>"
+                required
+            >
+
+            <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value="<?php echo htmlspecialchars($subject); ?>"
+                required
+            >
+
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                required><?php echo htmlspecialchars($message); ?></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="index.php" class="btn">Back to Home</a>
+
+    </section>
+
+</body>
+</html>

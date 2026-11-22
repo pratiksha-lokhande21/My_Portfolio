@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial</title>
+</head>
+<body>
+    <h2>Factorial Calculator</h2>
+
+    Enter Number:
+    <input type="number" id="num">
+
+    <button onclick="factorial()">Calculate</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function factorial() {
+            let n = Number(document.getElementById("num").value);
+            let fact = 1;
+
+            if (!Number.isInteger(n) || n < 0 || n > 170 ||
+                document.getElementById("num").value === "") {
+                document.getElementById("result").textContent =
+                    "Enter a whole number from 0 to 170";
+                return;
+            }
+
+            for (let i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+
+            document.getElementById("result").textContent =
+                "Factorial of " + n + " = " + fact;
+        }
+    </script>
+</body>
+</html>

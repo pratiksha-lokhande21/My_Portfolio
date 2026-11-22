@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Validation</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+
+    Username:
+    <input type="text" id="username"><br><br>
+
+    Password:
+    <input type="password" id="password"><br><br>
+
+    <button onclick="validateLogin()">Login</button>
+    <p id="result"></p>
+
+    <script>
+        function validateLogin() {
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value;
+
+            if (username === "") {
+                alert("Please enter username");
+            }
+            else if (password.trim() === "") {
+                alert("Please enter password");
+            }
+            else {
+                document.getElementById("result").textContent =
+                    "Login form submitted successfully!";
+            }
+        }
+    </script>
+</body>
+</html>

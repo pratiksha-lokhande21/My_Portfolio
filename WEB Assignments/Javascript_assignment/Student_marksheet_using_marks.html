@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marksheet</title>
+</head>
+<body>
+    <h2>Student Marksheet</h2>
+
+    Enter Seat Number:
+    <input type="text" id="seat">
+    <button onclick="showMarksheet()">Show Marksheet</button>
+
+    <div id="result"></div>
+
+    <script>
+        let students = {
+            "101": {name: "Rahul", html: 85, js: 90, css: 80},
+            "102": {name: "Priya", html: 78, js: 88, css: 92}
+        };
+
+        function showMarksheet() {
+            let seat = document.getElementById("seat").value.trim();
+            let student = students[seat];
+
+            if (student) {
+                let total = student.html + student.js + student.css;
+                let percentage = (total / 300) * 100;
+
+                document.getElementById("result").innerHTML =
+                    "<h3>Marksheet</h3>" +
+                    "Name: " + student.name + "<br>" +
+                    "HTML: " + student.html + "<br>" +
+                    "JavaScript: " + student.js + "<br>" +
+                    "CSS: " + student.css + "<br>" +
+                    "Total: " + total + "/300<br>" +
+                    "Percentage: " + percentage.toFixed(2) + "%";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Seat number not found";
+            }
+        }
+    </script>
+</body>
+</html>

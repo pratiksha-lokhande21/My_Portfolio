@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination</title>
+</head>
+<body>
+    <h2>Online Examination</h2>
+
+    <label>Student Name:</label>
+    <input type="text" id="name">
+
+    <h3>Q1. HTML stands for?</h3>
+    <input type="radio" name="q1" value="a"> Hyper Text Markup Language<br>
+    <input type="radio" name="q1" value="b"> High Text Machine Language<br>
+
+    <h3>Q2. JavaScript is used for?</h3>
+    <input type="radio" name="q2" value="a"> Styling<br>
+    <input type="radio" name="q2" value="b"> Interactivity<br><br>
+
+    <button onclick="submitExam()">Submit Exam</button>
+    <p id="result"></p>
+
+    <script>
+        function submitExam() {
+            let name = document.getElementById("name").value;
+            let q1 = document.querySelector('input[name="q1"]:checked');
+            let q2 = document.querySelector('input[name="q2"]:checked');
+
+            if (!name.trim() || !q1 || !q2) {
+                alert("Please complete the examination");
+                return;
+            }
+
+            let score = 0;
+            if (q1.value === "a") score++;
+            if (q2.value === "b") score++;
+
+            document.getElementById("result").innerHTML =
+                name + ", your score is " + score + "/2";
+        }
+    </script>
+</body>
+</html>

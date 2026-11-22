@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Assignment 4 - All 50 Programs</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f2f5fa;
+    color: #222;
+}
+h1, .intro { text-align: center; }
+h1 { color: #173d79; }
+h2 {
+    background: #173d79;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+h3 { color: #173d79; }
+.question {
+    background: white;
+    padding: 18px;
+    margin: 18px 0;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+}
+.demo {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.demo header, .demo footer {
+    background: #e2eaf7;
+    padding: 10px;
+}
+.demo nav { padding: 8px; background: #edf2fa; }
+.demo nav a { margin-right: 15px; }
+.demo main, .demo section, .demo article,
+.demo aside { padding: 10px; margin: 5px 0; }
+.demo article { border: 1px solid #ddd; }
+.demo aside { background: #f1f1f1; }
+svg, canvas {
+    max-width: 100%;
+    border: 1px solid #ddd;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.gallery figure { margin: 5px; }
+.gallery img { width: 140px; height: 90px; object-fit: cover; }
+.layout {
+    display: flex;
+    gap: 12px;
+}
+.layout main { flex: 3; }
+.layout aside { flex: 1; }
+@media(max-width: 600px) {
+    .layout { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<h1>HTML Assignment - 4</h1>
+<p class="intro">Topic: HTML5 | All 50 Practical Programs</p>
+
+<h2>PART A: BASIC QUESTIONS (1-20)</h2>
+
+<!-- BASIC 1 -->
+<div class="question">
+<h3>1. Header and Footer</h3>
+<div class="demo">
+    <header><h3>Welcome to My Website</h3></header>
+    <p>This is a simple HTML5 webpage.</p>
+    <footer>Copyright 2026 My Website</footer>
+</div>
+</div>
+
+<!-- BASIC 2 -->
+<div class="question">
+<h3>2. Website Title Inside Header</h3>
+<div class="demo">
+    <header>
+        <h1>My First Website</h1>
+        <p>Learning HTML5</p>
+    </header>
+</div>
+</div>
+
+<!-- BASIC 3 -->
+<div class="question">
+<h3>3. Navigation with Three Links</h3>
+<div class="demo">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+</div>
+
+<!-- BASIC 4 -->
+<div class="question">
+<h3>4. Paragraph Inside Main</h3>
+<div class="demo">
+    <main>
+        <p>HTML5 is used to create modern webpages.
+        It provides semantic elements and multimedia support.</p>
+    </main>
+</div>
+</div>
+
+<!-- BASIC 5 -->
+<div class="question">
+<h3>5. Two Different Sections</h3>
+<div class="demo">
+    <section>
+        <h4>HTML</h4>
+        <p>HTML creates webpage structure.</p>
+    </section>
+    <section>
+        <h4>CSS</h4>
+        <p>CSS styles webpages.</p>
+    </section>
+</div>
+</div>
+
+<!-- BASIC 6 -->
+<div class="question">
+<h3>6. Blog Post Using Article</h3>
+<div class="demo">
+    <article>
+        <h4>Importance of Technology</h4>
+        <p>Technology makes communication and learning easier.</p>
+    </article>
+</div>
+</div>
+
+<!-- BASIC 7 -->
+<div class="question">
+<h3>7. Aside with Related Links</h3>
+<div class="demo">
+    <aside>
+        <h4>Related Links</h4>
+        <a href="https://www.w3schools.com/html/">HTML Tutorial</a><br>
+        <a href="https://www.w3schools.com/css/">CSS Tutorial</a>
+    </aside>
+</div>
+</div>
+
+<!-- BASIC 8 -->
+<div class="question">
+<h3>8. Figure with Image and Caption</h3>
+<div class="demo">
+    <figure>
+        <img src="https://placehold.co/250x140?text=Nature"
+             alt="Nature illustration" width="250">
+        <figcaption>Figure 1: Beautiful Nature</figcaption>
+    </figure>
+</div>
+</div>
+
+<!-- BASIC 9 -->
+<div class="question">
+<h3>9. Today's Date Using Time</h3>
+<div class="demo">
+    <p>Today's event is scheduled on
+    <time id="todayDate"></time>.</p>
+</div>
+</div>
+
+<!-- BASIC 10 -->
+<div class="question">
+<h3>10. Contact Information Using Address</h3>
+<div class="demo">
+    <address>
+        Contact: Student Support<br>
+        Pune, Maharashtra<br>
+        Email: student@example.com
+    </address>
+</div>
+</div>
+
+<!-- BASIC 11 -->
+<div class="question">
+<h3>11. Header, Main and Footer Layout</h3>
+<div class="demo">
+    <header><h4>College Website</h4></header>
+    <main><p>Welcome to our college.</p></main>
+    <footer>Copyright 2026 College</footer>
+</div>
+</div>
+
+<!-- BASIC 12 -->
+<div class="question">
+<h3>12. Horizontal Navigation Links</h3>
+<div class="demo">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+</div>
+
+<!-- BASIC 13 -->
+<div class="question">
+<h3>13. Article Publication Date</h3>
+<div class="demo">
+    <article>
+        <h4>HTML5 Introduction</h4>
+        <p>Published on
+            <time datetime="2026-10-24">24 October 2026</time>
+        </p>
+    </article>
+</div>
+</div>
+
+<!-- BASIC 14 -->
+<div class="question">
+<h3>14. Blog Article Inside Main</h3>
+<div class="demo">
+    <main>
+        <article>
+            <h4>My First Blog</h4>
+            <p>I am learning HTML5 and web development.</p>
+        </article>
+    </main>
+</div>
+</div>
+
+<!-- BASIC 15 -->
+<div class="question">
+<h3>15. Two Images with Captions</h3>
+<div class="demo gallery">
+    <figure>
+        <img src="https://placehold.co/200x120?text=Mountain"
+             alt="Mountain illustration">
+        <figcaption>Mountain</figcaption>
+    </figure>
+    <figure>
+        <img src="https://placehold.co/200x120?text=River"
+             alt="River illustration">
+        <figcaption>River</figcaption>
+    </figure>
+</div>
+</div>
+
+<!-- BASIC 16 -->
+<div class="question">
+<h3>16. Developer Email Using Address</h3>
+<div class="demo">
+    <address>
+        Developed by Web Developer<br>
+        Email:
+        <a href="mailto:developer@example.com">
+            developer@example.com
+        </a>
+    </address>
+</div>
+</div>
+
+<!-- BASIC 17 -->
+<div class="question">
+<h3>17. SVG Rectangle</h3>
+<svg width="260" height="140" aria-label="Blue rectangle">
+    <rect x="30" y="25" width="190" height="90"
+          fill="skyblue" stroke="black" stroke-width="2"/>
+</svg>
+</div>
+
+<!-- BASIC 18 -->
+<div class="question">
+<h3>18. SVG Circle</h3>
+<svg width="220" height="160" aria-label="Red circle">
+    <circle cx="110" cy="80" r="60"
+            fill="tomato" stroke="black" stroke-width="2"/>
+</svg>
+</div>
+
+<!-- BASIC 19 -->
+<div class="question">
+<h3>19. SVG Line Between Two Points</h3>
+<svg width="260" height="130" aria-label="Diagonal line">
+    <line x1="20" y1="20" x2="230" y2="100"
+          stroke="blue" stroke-width="5"/>
+</svg>
+</div>
+
+<!-- BASIC 20 -->
+<div class="question">
+<h3>20. Canvas with Border</h3>
+<canvas width="300" height="140"
+        style="border:2px solid black;">
+</canvas>
+</div>
+
+
+<h2>PART B: INTERMEDIATE QUESTIONS (1-20)</h2>
+
+<!-- INTERMEDIATE 1 -->
+<div class="question">
+<h3>1. Complete Semantic Layout</h3>
+<div class="demo">
+    <header><h4>My Website</h4></header>
+    <nav><a href="#home">Home</a> <a href="#about">About</a></nav>
+    <div class="layout">
+        <main><h4>Main Content</h4><p>Welcome to our website.</p></main>
+        <aside><h4>Sidebar</h4><p>Useful information.</p></aside>
+    </div>
+    <footer>Copyright 2026</footer>
+</div>
+</div>
+
+<!-- INTERMEDIATE 2 -->
+<div class="question">
+<h3>2. Multiple Sections Inside Main</h3>
+<div class="demo">
+    <main>
+        <section>
+            <h4>Programming</h4>
+            <p>Learn Java and Python.</p>
+        </section>
+        <section>
+            <h4>Web Development</h4>
+            <p>Learn HTML, CSS and JavaScript.</p>
+        </section>
+        <section>
+            <h4>Database</h4>
+            <p>Learn SQL and DBMS.</p>
+        </section>
+    </main>
+</div>
+</div>
+
+<!-- INTERMEDIATE 3 -->
+<div class="question">
+<h3>3. Blog Post with Author Address</h3>
+<div class="demo">
+    <article>
+        <h4>Learning Web Development</h4>
+        <p>Web development is an important IT skill.</p>
+        <address>Written by Student Author<br>
+        Email: author@example.com</address>
+    </article>
+</div>
+</div>
+
+<!-- INTERMEDIATE 4 -->
+<div class="question">
+<h3>4. Header Navigation and Footer</h3>
+<div class="demo">
+    <header>
+        <h4>Tech World</h4>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <p>Welcome to Tech World.</p>
+    <footer>Copyright 2026 Tech World</footer>
+</div>
+</div>
+
+<!-- INTERMEDIATE 5 -->
+<div class="question">
+<h3>5. Two Blog Posts Inside Main</h3>
+<div class="demo">
+    <main>
+        <article>
+            <h4>Blog 1: Artificial Intelligence</h4>
+            <p>AI helps computers perform intelligent tasks.</p>
+        </article>
+        <article>
+            <h4>Blog 2: Cloud Computing</h4>
+            <p>Cloud computing provides online computing resources.</p>
+        </article>
+    </main>
+</div>
+</div>
+
+<!-- INTERMEDIATE 6 -->
+<div class="question">
+<h3>6. Blog with Related Articles in Aside</h3>
+<div class="demo">
+    <main>
+        <article>
+            <h4>Introduction to HTML5</h4>
+            <p>HTML5 provides semantic elements for webpages.</p>
+        </article>
+        <aside>
+            <h4>Related Articles</h4>
+            <p>1. HTML Basics</p>
+            <p>2. CSS Introduction</p>
+        </aside>
+    </main>
+</div>
+</div>
+
+<!-- INTERMEDIATE 7 -->
+<div class="question">
+<h3>7. Figure and Caption Inside Section</h3>
+<div class="demo">
+    <section>
+        <h4>Nature Gallery</h4>
+        <figure>
+            <img src="https://placehold.co/250x140?text=Landscape"
+                 alt="Landscape illustration" width="250">
+            <figcaption>Figure: Natural Landscape</figcaption>
+        </figure>
+    </section>
+</div>
+</div>
+
+<!-- INTERMEDIATE 8 -->
+<div class="question">
+<h3>8. Event Date and Time</h3>
+<div class="demo">
+    <article>
+        <h4>College Technical Event</h4>
+        <p>Published on
+        <time datetime="2025-08-20T17:00">
+            20 August 2025, 5:00 PM
+        </time></p>
+    </article>
+</div>
+</div>
+
+<!-- INTERMEDIATE 9 -->
+<div class="question">
+<h3>9. Company Contact Page</h3>
+<div class="demo">
+    <h4>ABC Technologies</h4>
+    <address>
+        Location: Pune, Maharashtra<br>
+        Phone: +91 9876543210<br>
+        Email:
+        <a href="mailto:contact@example.com">
+            contact@example.com
+        </a>
+    </address>
+</div>
+</div>
+
+<!-- INTERMEDIATE 10 -->
+<div class="question">
+<h3>10. Magazine Layout</h3>
+<div class="demo">
+    <main>
+        <section>
+            <h4>Technology Magazine</h4>
+            <article>
+                <h4>Latest AI Trends</h4>
+                <p>AI is transforming industries.</p>
+            </article>
+            <article>
+                <h4>Cybersecurity</h4>
+                <p>Cybersecurity protects digital information.</p>
+            </article>
+        </section>
+    </main>
+</div>
+</div>
+
+<!-- INTERMEDIATE 11 -->
+<div class="question">
+<h3>11. Blue SVG Rectangle</h3>
+<svg width="270" height="150" aria-label="Blue rectangle">
+    <rect x="35" y="25" width="200" height="100"
+          fill="blue"/>
+</svg>
+</div>
+
+<!-- INTERMEDIATE 12 -->
+<div class="question">
+<h3>12. SVG Circle and Rectangle</h3>
+<svg width="320" height="170" aria-label="Circle and rectangle">
+    <circle cx="75" cy="85" r="50" fill="orange"/>
+    <rect x="155" y="35" width="130" height="100"
+          fill="green"/>
+</svg>
+</div>
+
+<!-- INTERMEDIATE 13 -->
+<div class="question">
+<h3>13. SVG Triangle Using Polygon</h3>
+<svg width="270" height="180" aria-label="Triangle">
+    <polygon points="135,20 30,150 240,150"
+             fill="purple" stroke="black" stroke-width="2"/>
+</svg>
+</div>
+
+<!-- INTERMEDIATE 14 -->
+<div class="question">
+<h3>14. Line Connecting Two Circles</h3>
+<svg width="320" height="140" aria-label="Connected circles">
+    <line x1="70" y1="70" x2="250" y2="70"
+          stroke="black" stroke-width="4"/>
+    <circle cx="70" cy="70" r="35" fill="red"/>
+    <circle cx="250" cy="70" r="35" fill="blue"/>
+</svg>
+</div>
+
+<!-- INTERMEDIATE 15 -->
+<div class="question">
+<h3>15. Red Filled Rectangle on Canvas</h3>
+<canvas id="canvas15" width="300" height="160"></canvas>
+</div>
+
+<!-- INTERMEDIATE 16 -->
+<div class="question">
+<h3>16. Diagonal Canvas Line</h3>
+<canvas id="canvas16" width="300" height="160"></canvas>
+</div>
+
+<!-- INTERMEDIATE 17 -->
+<div class="question">
+<h3>17. Blue Filled Circle on Canvas</h3>
+<canvas id="canvas17" width="300" height="160"></canvas>
+</div>
+
+<!-- INTERMEDIATE 18 -->
+<div class="question">
+<h3>18. Multiple Canvas Shapes</h3>
+<canvas id="canvas18" width="350" height="180"></canvas>
+</div>
+
+<!-- INTERMEDIATE 19 -->
+<div class="question">
+<h3>19. Green SVG Ellipse</h3>
+<svg width="300" height="160" aria-label="Green ellipse">
+    <ellipse cx="150" cy="80" rx="110" ry="55"
+             fill="green"/>
+</svg>
+</div>
+
+<!-- INTERMEDIATE 20 -->
+<div class="question">
+<h3>20. Semantic Layout with Inline SVG</h3>
+<div class="demo">
+    <header><h4>SVG Website</h4></header>
+    <main>
+        <p>This webpage contains an SVG drawing.</p>
+        <svg width="250" height="120" aria-label="Orange circle">
+            <circle cx="125" cy="60" r="45" fill="orange"/>
+        </svg>
+    </main>
+    <aside>Related: HTML5 Graphics</aside>
+    <footer>Copyright 2026</footer>
+</div>
+</div>
+
+
+<h2>PART C: ADVANCED QUESTIONS (1-10)</h2>
+
+<!-- ADVANCED 1 -->
+<div class="question">
+<h3>1. Complete Semantic Webpage</h3>
+<div class="demo">
+    <header>
+        <h3>Tech Learning Portal</h3>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <main>
+            <section>
+                <h4>Our Courses</h4>
+                <article>
+                    <h4>Web Development</h4>
+                    <p>Learn HTML, CSS and JavaScript.</p>
+                </article>
+                <article>
+                    <h4>Python Programming</h4>
+                    <p>Learn programming fundamentals.</p>
+                </article>
+            </section>
+        </main>
+        <aside>
+            <h4>Announcements</h4>
+            <p>New courses available.</p>
+        </aside>
+    </div>
+
+    <footer>Copyright 2026 Tech Learning Portal</footer>
+</div>
+</div>
+
+<!-- ADVANCED 2 -->
+<div class="question">
+<h3>2. Blog Webpage with Three Articles</h3>
+<div class="demo">
+    <main>
+        <article>
+            <h4>Post 1: Artificial Intelligence</h4>
+            <p>AI is changing the technology industry.</p>
+            <time datetime="2026-10-01">1 October 2026</time>
+            <address>Author: Amit | amit@example.com</address>
+        </article>
+
+        <article>
+            <h4>Post 2: Cloud Computing</h4>
+            <p>Cloud services help businesses scale.</p>
+            <time datetime="2026-10-05">5 October 2026</time>
+            <address>Author: Neha | neha@example.com</address>
+        </article>
+
+        <article>
+            <h4>Post 3: Cybersecurity</h4>
+            <p>Security is important for digital systems.</p>
+            <time datetime="2026-10-10">10 October 2026</time>
+            <address>Author: Rahul | rahul@example.com</address>
+        </article>
+    </main>
+</div>
+</div>
+
+<!-- ADVANCED 3 -->
+<div class="question">
+<h3>3. Mini Photo Gallery</h3>
+<div class="demo gallery">
+    <figure>
+        <img src="https://placehold.co/180x120?text=Nature"
+             alt="Nature illustration">
+        <figcaption>Nature</figcaption>
+    </figure>
+    <figure>
+        <img src="https://placehold.co/180x120?text=Mountains"
+             alt="Mountain illustration">
+        <figcaption>Mountains</figcaption>
+    </figure>
+    <figure>
+        <img src="https://placehold.co/180x120?text=Beach"
+             alt="Beach illustration">
+        <figcaption>Beach</figcaption>
+    </figure>
+</div>
+</div>
+
+<!-- ADVANCED 4 -->
+<div class="question">
+<h3>4. Newspaper Layout</h3>
+<div class="demo">
+    <header><h3>Daily Technology News</h3></header>
+    <div class="layout">
+        <main>
+            <section>
+                <h4>Latest News</h4>
+                <article>
+                    <h4>AI Innovations</h4>
+                    <p>New AI tools are improving productivity.</p>
+                </article>
+                <article>
+                    <h4>Digital Education</h4>
+                    <p>Online learning is becoming more popular.</p>
+                </article>
+            </section>
+        </main>
+        <aside>
+            <h4>Trending</h4>
+            <p>Cloud Computing</p>
+            <p>Cybersecurity</p>
+            <p>Data Science</p>
+        </aside>
+    </div>
+    <footer>Daily Technology News - 2026</footer>
+</div>
+</div>
+
+<!-- ADVANCED 5 -->
+<div class="question">
+<h3>5. Sunset Scene Using SVG</h3>
+<svg width="400" height="240" viewBox="0 0 400 240"
+     aria-label="Sunset with sun, rays and green ground">
+    <rect width="400" height="240" fill="#ffe2aa"/>
+
+    <!-- Sun rays -->
+    <g stroke="orange" stroke-width="4">
+        <line x1="200" y1="15" x2="200" y2="45"/>
+        <line x1="200" y1="155" x2="200" y2="185"/>
+        <line x1="115" y1="100" x2="145" y2="100"/>
+        <line x1="255" y1="100" x2="285" y2="100"/>
+        <line x1="140" y1="40" x2="160" y2="60"/>
+        <line x1="240" y1="140" x2="260" y2="160"/>
+        <line x1="140" y1="160" x2="160" y2="140"/>
+        <line x1="240" y1="60" x2="260" y2="40"/>
+    </g>
+
+    <circle cx="200" cy="100" r="52" fill="#ff9800"/>
+    <rect x="0" y="175" width="400" height="65"
+          fill="#438b45"/>
+</svg>
+</div>
+
+<!-- ADVANCED 6 -->
+<div class="question">
+<h3>6. House Drawing Using Canvas</h3>
+<canvas id="houseCanvas" width="350" height="270"></canvas>
+</div>
+
+<!-- ADVANCED 7 -->
+<div class="question">
+<h3>7. Two Linear Gradient Rectangles</h3>
+<canvas id="gradientCanvas" width="380" height="200"></canvas>
+</div>
+
+<!-- ADVANCED 8 -->
+<div class="question">
+<h3>8. Bouncing Ball Animation</h3>
+<canvas id="ballCanvas" width="380" height="210"></canvas>
+<p>Watch the ball bounce inside the canvas.</p>
+</div>
+
+<!-- ADVANCED 9 -->
+<div class="question">
+<h3>9. Semantic Webpage with SVG Bar Chart</h3>
+<div class="demo">
+    <header><h4>Student Performance Report</h4></header>
+    <main>
+        <section>
+            <h4>Subject Marks</h4>
+            <svg width="380" height="260"
+                 viewBox="0 0 380 260"
+                 role="img"
+                 aria-label="Bar chart showing Java 75, Python 90 and HTML 65 marks">
+                <line x1="45" y1="20" x2="45" y2="215"
+                      stroke="black" stroke-width="2"/>
+                <line x1="45" y1="215" x2="350" y2="215"
+                      stroke="black" stroke-width="2"/>
+
+                <rect x="75" y="65" width="65" height="150"
+                      fill="steelblue"/>
+                <rect x="170" y="35" width="65" height="180"
+                      fill="seagreen"/>
+                <rect x="265" y="85" width="65" height="130"
+                      fill="orange"/>
+
+                <g font-size="14" text-anchor="middle">
+                    <text x="107" y="55">75</text>
+                    <text x="202" y="25">90</text>
+                    <text x="297" y="75">65</text>
+                    <text x="107" y="238">Java</text>
+                    <text x="202" y="238">Python</text>
+                    <text x="297" y="238">HTML</text>
+                </g>
+            </svg>
+        </section>
+    </main>
+    <footer>Student Performance Dashboard</footer>
+</div>
+</div>
+
+<!-- ADVANCED 10 -->
+<div class="question">
+<h3>10. Dashboard with Animated Canvas Graph</h3>
+<div class="demo">
+    <header>
+        <h3>Analytics Dashboard</h3>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#reports">Reports</a>
+            <a href="#settings">Settings</a>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <main>
+            <h4>Monthly Performance</h4>
+            <canvas id="dashboardCanvas"
+                    width="400" height="240"></canvas>
+            <p>Animated graph showing monthly data.</p>
+        </main>
+        <aside>
+            <h4>Dashboard Summary</h4>
+            <p>Total Users: 1,250</p>
+            <p>New Users: 180</p>
+            <p>Growth: 15%</p>
+        </aside>
+    </div>
+
+    <footer>Copyright 2026 Analytics Dashboard</footer>
+</div>
+</div>
+
+
+<script>
+// BASIC 9: Display today's date
+const now = new Date();
+const todayElement = document.getElementById("todayDate");
+todayElement.textContent = now.toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+});
+todayElement.dateTime =
+    now.getFullYear() + "-" +
+    String(now.getMonth() + 1).padStart(2, "0") + "-" +
+    String(now.getDate()).padStart(2, "0");
+
+
+// INTERMEDIATE 15: Red rectangle
+const c15 = document.getElementById("canvas15");
+const ctx15 = c15.getContext("2d");
+ctx15.fillStyle = "red";
+ctx15.fillRect(40, 30, 210, 100);
+
+
+// INTERMEDIATE 16: Diagonal line
+const c16 = document.getElementById("canvas16");
+const ctx16 = c16.getContext("2d");
+ctx16.beginPath();
+ctx16.moveTo(0, 0);
+ctx16.lineTo(300, 160);
+ctx16.strokeStyle = "blue";
+ctx16.lineWidth = 4;
+ctx16.stroke();
+
+
+// INTERMEDIATE 17: Blue circle
+const c17 = document.getElementById("canvas17");
+const ctx17 = c17.getContext("2d");
+ctx17.beginPath();
+ctx17.arc(150, 80, 55, 0, 2 * Math.PI);
+ctx17.fillStyle = "blue";
+ctx17.fill();
+
+
+// INTERMEDIATE 18: Multiple shapes
+const c18 = document.getElementById("canvas18");
+const ctx18 = c18.getContext("2d");
+
+// Rectangle
+ctx18.fillStyle = "red";
+ctx18.fillRect(20, 35, 90, 75);
+
+// Circle
+ctx18.beginPath();
+ctx18.arc(180, 75, 42, 0, 2 * Math.PI);
+ctx18.fillStyle = "green";
+ctx18.fill();
+
+// Line
+ctx18.beginPath();
+ctx18.moveTo(245, 30);
+ctx18.lineTo(325, 145);
+ctx18.strokeStyle = "blue";
+ctx18.lineWidth = 5;
+ctx18.stroke();
+
+
+// ADVANCED 6: House drawing
+const house = document.getElementById("houseCanvas");
+const hc = house.getContext("2d");
+
+// Sky
+hc.fillStyle = "#c9ebff";
+hc.fillRect(0, 0, 350, 270);
+
+// Ground
+hc.fillStyle = "#7cbd65";
+hc.fillRect(0, 230, 350, 40);
+
+// House body
+hc.fillStyle = "#f4bc7b";
+hc.fillRect(85, 105, 180, 125);
+
+// Triangle roof
+hc.beginPath();
+hc.moveTo(65, 105);
+hc.lineTo(175, 25);
+hc.lineTo(285, 105);
+hc.closePath();
+hc.fillStyle = "#a43c32";
+hc.fill();
+
+// Door
+hc.fillStyle = "#75452d";
+hc.fillRect(155, 160, 45, 70);
+
+// Window
+hc.fillStyle = "#80d7ff";
+hc.fillRect(105, 135, 35, 35);
+hc.strokeStyle = "black";
+hc.lineWidth = 2;
+hc.strokeRect(105, 135, 35, 35);
+
+// Window cross
+hc.beginPath();
+hc.moveTo(122.5, 135);
+hc.lineTo(122.5, 170);
+hc.moveTo(105, 152.5);
+hc.lineTo(140, 152.5);
+hc.stroke();
+
+
+// ADVANCED 7: Gradient rectangles
+const gradientCanvas =
+    document.getElementById("gradientCanvas");
+const gc = gradientCanvas.getContext("2d");
+
+const gradient1 = gc.createLinearGradient(20, 0, 170, 0);
+gradient1.addColorStop(0, "red");
+gradient1.addColorStop(1, "yellow");
+gc.fillStyle = gradient1;
+gc.fillRect(20, 35, 150, 115);
+
+const gradient2 = gc.createLinearGradient(200, 0, 360, 0);
+gradient2.addColorStop(0, "blue");
+gradient2.addColorStop(1, "green");
+gc.fillStyle = gradient2;
+gc.fillRect(200, 35, 150, 115);
+
+
+// ADVANCED 8: Bouncing ball animation
+const ballCanvas = document.getElementById("ballCanvas");
+const bc = ballCanvas.getContext("2d");
+
+let ballX = 50;
+let ballY = 50;
+let speedX = 2.5;
+let speedY = 2;
+const radius = 20;
+
+function animateBall() {
+    bc.clearRect(0, 0, ballCanvas.width, ballCanvas.height);
+
+    bc.beginPath();
+    bc.arc(ballX, ballY, radius, 0, Math.PI * 2);
+    bc.fillStyle = "crimson";
+    bc.fill();
+
+    ballX += speedX;
+    ballY += speedY;
+
+    if (ballX + radius >= ballCanvas.width ||
+        ballX - radius <= 0) {
+        speedX = -speedX;
+    }
+
+    if (ballY + radius >= ballCanvas.height ||
+        ballY - radius <= 0) {
+        speedY = -speedY;
+    }
+
+    requestAnimationFrame(animateBall);
+}
+animateBall();
+
+
+// ADVANCED 10: Animated dashboard graph
+const dashboard = document.getElementById("dashboardCanvas");
+const dc = dashboard.getContext("2d");
+
+const values = [60, 100, 75, 145, 115, 180];
+const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+let progress = 0;
+
+function animateGraph() {
+    dc.clearRect(0, 0, dashboard.width, dashboard.height);
+
+    // Axes
+    dc.beginPath();
+    dc.moveTo(40, 20);
+    dc.lineTo(40, 205);
+    dc.lineTo(380, 205);
+    dc.strokeStyle = "#333";
+    dc.lineWidth = 2;
+    dc.stroke();
+
+    // Bars
+    for (let i = 0; i < values.length; i++) {
+        let height = values[i] * progress;
+        let x = 55 + i * 53;
+
+        dc.fillStyle = "#3778c2";
+        dc.fillRect(x, 205 - height, 32, height);
+
+        dc.fillStyle = "#222";
+        dc.font = "12px Arial";
+        dc.fillText(labels[i], x, 225);
+    }
+
+    if (progress < 1) {
+        progress = Math.min(progress + 0.012, 1);
+        requestAnimationFrame(animateGraph);
+    }
+}
+animateGraph();
+
+</script>
+
+</body>
+</html>

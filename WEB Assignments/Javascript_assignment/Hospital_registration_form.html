@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Registration</title>
+</head>
+<body>
+    <h2>Hospital Patient Registration</h2>
+
+    <form onsubmit="registerPatient(event)">
+        Patient Name: <input type="text" id="name" required><br><br>
+        Age: <input type="number" id="age" min="1" required><br><br>
+        Gender:
+        <select id="gender">
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+        </select><br><br>
+        Contact: <input type="tel" id="contact" pattern="[0-9]{10}" required><br><br>
+        Department:
+        <select id="department">
+            <option>General Medicine</option>
+            <option>Cardiology</option>
+            <option>Orthopedics</option>
+        </select><br><br>
+
+        <button type="submit">Register Patient</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function registerPatient(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let department = document.getElementById("department").value;
+
+            document.getElementById("result").innerHTML =
+                "Patient " + name +
+                " registered successfully in " + department;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Table 1</title>
+</head>
+<body>
+
+<h2>Nested Tables</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+        <th>Header 4</th>
+    </tr>
+    <tr>
+        <td>Row 2 - Item 1</td>
+        <td>Row 2 - Item 2</td>
+        <td>
+            Row 2: Nested Table 1
+            <table border="1" width="100%">
+                <tr>
+                    <th>Heading</th>
+                    <th>Item</th>
+                </tr>
+                <tr>
+                    <td>Row 1</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Row 2</td>
+                    <td>B</td>
+                </tr>
+            </table>
+        </td>
+        <td>Row 2 - Item 4</td>
+    </tr>
+    <tr>
+        <td>Row 3 - Item 1</td>
+        <td>Row 3 - Item 2</td>
+        <td>Row 3 - Item 3</td>
+        <td>Row 3 - Item 4</td>
+    </tr>
+    <tr>
+        <td colspan="4">Last row of outer table</td>
+    </tr>
+</table>
+
+</body>
+</html>

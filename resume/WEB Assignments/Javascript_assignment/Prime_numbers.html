@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Numbers</title>
+</head>
+<body>
+    <h2>Prime Numbers from 1 to 100</h2>
+    <p id="result"></p>
+
+    <script>
+        let output = "";
+
+        for (let num = 2; num <= 100; num++) {
+            let prime = true;
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    prime = false;
+                    break;
+                }
+            }
+
+            if (prime) {
+                output += num + " ";
+            }
+        }
+
+        document.getElementById("result").textContent = output;
+    </script>
+</body>
+</html>
